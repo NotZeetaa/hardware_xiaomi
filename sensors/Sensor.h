@@ -116,7 +116,7 @@ class SysfsPollingOneShotSensor : public OneShotSensor {
     int mPollFd;
 };
 
-const std::string kTsDoubleTapPressedPath = "/sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/double_tap_pressed";
+const std::string kTsDoubleTapPressedPath = "/sys/devices/platform/soc/990000.spi/spi_master/spi1/spi1.0/double_tap_pressed";
 
 class DoubleTapSensor : public SysfsPollingOneShotSensor {
   public:
@@ -127,7 +127,7 @@ class DoubleTapSensor : public SysfsPollingOneShotSensor {
               static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) + 1)) {}
 };
 
-const std::string kTsSingleTapPressedPath = "/sys/devices/platform/soc/884000.i2c/i2c-1/1-0038/single_tap_pressed";
+const std::string kTsSingleTapPressedPath = "/sys/devices/platform/soc/990000.spi/spi_master/spi1/spi1.0/single_tap_pressed";
 
 class SingleTapSensor : public SysfsPollingOneShotSensor {
   public:
